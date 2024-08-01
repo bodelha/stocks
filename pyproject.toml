@@ -10,8 +10,32 @@ python = "^3.10"
 fastapi = "^0.111.1"
 pytest = "^8.3.2"
 httpx = "^0.27.0"
+black = "^24.4.2"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+exclude = '''
+/(
+    \.venv
+    | _build
+    | dist
+    | \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \.svn
+    | \.ipynb_checkpoints
+    | \.nox
+    | \.direnv
+    | migrations
+    | __pycache__
+    | node_modules
+)/
+'''
